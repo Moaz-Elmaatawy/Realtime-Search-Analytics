@@ -40,12 +40,7 @@ class SearchesController < ApplicationController
       
         fuzzy_matcher = FuzzyStringMatch::JaroWinkler.create(:pure)
         distance = fuzzy_matcher.getDistance(last_query.query, query)
-        print("##############\n")
-        print("\n")
-        print(distance)
-        print("\n")
-        print(last_query.query , " , " , query)
-        print("\n")
+
         if distance >= threshold
             last_query.destroy  # Delete the old query
             true  # Treat the new query as a distinct one for saving

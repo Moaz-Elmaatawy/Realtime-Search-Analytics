@@ -4,7 +4,6 @@ export default class extends Controller {
   static targets = ["input"]
 
   connect() {
-    console.log("SearchController connected");
     this.debouncedSearch = this.debounce(this.sendSearchQuery, 300);
   }
 
