@@ -36,12 +36,12 @@
     <% end %>
 
     <div class="user-search-container">
-    <h2>Search by User</h2>
-    <%= form_with url: analytics_path, method: :get, class: 'user-search-form' do |form| %>
-        <%= form.label :user_identifier, "User Identifier" %>
-        <%= form.text_field :user_identifier, class: 'user-search-input' %>
-        <%= form.submit "Search", class: 'user-search-button' %>
-    <% end %>
+        <h2>Search by User</h2>
+        <%= form_with url: analytics_path, method: :get, class: 'user-search-form' do |form| %>
+            <%= form.label :user_identifier, "Select User" %>
+            <%= form.select :user_identifier, @user_identifiers, { prompt: 'Choose a User' }, { class: 'user-search-dropdown' } %>
+            <%= form.submit "Search", class: 'user-search-button' %>
+        <% end %>
     </div>
 
     <%= link_to 'Back to Search', '/', class: 'back-button' %>

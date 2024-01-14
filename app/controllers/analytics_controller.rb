@@ -1,5 +1,7 @@
 class AnalyticsController < ApplicationController
     def index
+        @user_identifiers = SearchQuery.distinct.pluck(:user_identifier)
+
         @top_searches = SearchQuery.group(:query)
                                     .order('count_id DESC')
                                     .count('id')
