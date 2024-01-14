@@ -1,0 +1,50 @@
+<div class="analytics-container">
+    <div class="analytics-header">
+        <h1>Search Analytics</h1>
+        <%= button_to 'Reset Analytics', reset_analytics_path, method: :post, class: 'reset-button'%>
+
+    </div>
+
+    <h2>Top 10 Most Searched Queries</h2>
+    <ul>
+    <% @top_searches.each do |query, count| %>
+        <li><%= query %> (searched <%= count %> times)</li>
+    <% end %>
+    </ul>
+
+    <h2>10 Most Recent Queries</h2>
+    <ul>
+    <% @recent_searches.each do |search_query| %>
+        <li><%= search_query.query %> (at <%= search_query.created_at %>)</li>
+    <% end %>
+    </ul>
+
+    <% if @user_top_searches %>
+    <h2>User's Top 10 Searched Queries</h2>
+    <ul>
+        <% @user_top_searches.each do |query, count| %>
+        <li><%= query %> (searched <%= count %> times)</li>
+        <% end %>
+    </ul>
+
+    <h2>User's 10 Most Recent Queries</h2>
+    <ul>
+        <% @user_recent_searches.each do |search_query| %>
+        <li><%= search_query.query %> (at <%= search_query.created_at %>)</li>
+        <% end %>
+    </ul>
+    <% end %>
+
+    <div class="user-search-container">
+    <h2>Search by User</h2>
+    <%= form_with url: analytics_path, method: :get, class: 'user-search-form' do |form| %>
+        <%= form.label :user_identifier, "User Identifier" %>
+        <%= form.text_field :user_identifier, class: 'user-search-input' %>
+        <%= form.submit "Search", class: 'user-search-button' %>
+    <% end %>
+    </div>
+
+    <%= link_to 'Back to Search', '/', class: 'back-button' %>
+
+    
+</div>

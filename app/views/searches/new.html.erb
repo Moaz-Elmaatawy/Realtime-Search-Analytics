@@ -1,0 +1,21 @@
+
+<div class="header-container">
+  <h1>Search for Articles</h1>
+  <div class="analytics-button-container">
+    <%= link_to 'Analytics', analytics_path, class: 'analytics-button' %>
+  </div>
+</div>
+
+<div class="search-container" data-controller="search">
+  <input type="text" id="search-input" data-search-target="input" data-action="input->search#search" placeholder="Type to search...">
+  
+</div>
+
+<div id="articles">
+  <% @articles.each do |article| %>
+    <div class="article">
+      <h2><%= article.title %></h2>
+      <p><%= article.content %></p>
+    </div>
+  <% end %>
+</div>

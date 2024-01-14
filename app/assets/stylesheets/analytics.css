@@ -1,0 +1,147 @@
+/* General Styles for Analytics Page */
+.analytics-container {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  .analytics-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .reset-button {
+    padding: 8px 15px;
+    background-color: #dc3545; /* Red color for reset */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  }
+  
+  .reset-button:hover {
+  background-color: #c82333;
+  }
+  /* Styling Headings */
+  .analytics-container h1, 
+  .analytics-container h2 {
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  /* Styling Lists */
+  .analytics-container ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .analytics-container li {
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+  }
+  
+  /* Styling the User Search Form */
+  .analytics-container form {
+    margin-bottom: 30px;
+  }
+  
+  .analytics-container label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .analytics-container input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .analytics-container input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .analytics-container input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  .user-search-container {
+    margin-bottom: 20px;
+  }
+  
+  .user-search-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .form-group {
+    flex-grow: 1;
+  }
+  
+  .user-search-form {
+  margin-bottom: 20px;
+}
+
+.form-inputs {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adjust the space between the input and button */
+}
+
+.user-search-container {
+  margin-bottom: 20px;
+}
+
+.user-search-form {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adjust the gap between items as needed */
+}
+
+.user-search-input {
+  flex-grow: 1; /* Allows the input to take up available space */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.user-search-button {
+  padding: 8px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.user-search-button:hover {
+  background-color: #0056b3;
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 8px 15px;
+  background-color: #f8f9fa;
+  color: #007bff;
+  text-decoration: none;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  transition: background-color 0.3s;
+}
+
+.back-button:hover {
+  background-color: #e2e6ea;
+  color: #0056b3;
+}
