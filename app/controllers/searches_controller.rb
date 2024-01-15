@@ -35,8 +35,8 @@ class SearchesController < ApplicationController
           else 0.70
         end
       
-        # Consider time factor - for example, 2 minutes
-        return true if Time.current - last_query.created_at > 2.minutes
+        # Consider time factor - for example, 30 seconds
+        return true if Time.current - last_query.created_at > 30.seconds
       
         fuzzy_matcher = FuzzyStringMatch::JaroWinkler.create(:pure)
         distance = fuzzy_matcher.getDistance(last_query.query, query)
