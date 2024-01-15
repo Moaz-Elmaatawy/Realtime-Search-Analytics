@@ -8,7 +8,7 @@ class SearchesController < ApplicationController
     end
   
     def create
-      user_identifier = request.remote_ip # or another identifier if available
+      user_identifier = request.headers['X-Forwarded-For']&.split(',')&.first.strip || request.remote_ip
       query = params[:query]
   
       if new_query?(user_identifier, query)
